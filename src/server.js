@@ -31,4 +31,4 @@ app.use('/files', express.static(path.resolve(__dirname, 'tmp')))
 
 app.use(require('./routers'))
 
-server.listen(3333)
+server.listen(process.env.PORT || 3333)
