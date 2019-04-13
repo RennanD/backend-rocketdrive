@@ -20,9 +20,9 @@ mongoose.connect('mongodb+srv://rocketdrive:rennan520@cluster0-vpjbs.mongodb.net
 {
     useNewUrlParser: true
 })
-app.use((req, res,next)=>{
+app.use((req, res, next)=>{
     req.io = io
-    return netx()
+    return next()
 })
 
 app.use(express.json())
